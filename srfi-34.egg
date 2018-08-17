@@ -1,0 +1,9 @@
+;; -*-Scheme-*-
+((synopsis "SRFI-34: Exception Handling for Programs")
+ (author "Richard Kelsey, Michael Sperber")
+ (maintainer "Ben Clark, Jörg F. Wittenberger")
+ ;;(doc-from-wiki)
+ (license "SRFI")
+ (category misc)
+ (version "0.7")
+ (components (extension srfi-34)))
