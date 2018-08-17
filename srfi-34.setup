@@ -1,0 +1,13 @@
+;;; srfi-34.setup
+
+(compile -s -O3 -d1 srfi-34.scm -j srfi-34)
+(compile -s -O3 -d0 srfi-34.import.scm)
+(compile -c -O3 -d1 srfi-34.scm -j srfi-34)
+
+(install-extension
+ 'srfi-34
+ '("srfi-34.so" "srfi-34.import.so") 
+ '((version "0.6")
+   (static "srfi-34.o")))
+ 
+ 

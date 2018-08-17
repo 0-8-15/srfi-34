@@ -13,12 +13,18 @@
     raise
     guard)
 
-(import scheme
-	(prefix
-	 (only (chicken base) error)
-	 chicken:)
-	srfi-39
-	)
+(import scheme)
+(cond-expand
+ (chicken-4
+  (import
+   (prefix (only chicken error) chicken:)
+   (only chicken make-parameter)
+   ))
+ (else
+  (import
+   (prefix (only (chicken base) error) chicken:)
+   srfi-39
+   )))
 
 (define current-exception-handlers
  (make-parameter

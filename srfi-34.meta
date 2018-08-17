@@ -1,0 +1,7 @@
+((egg "srfi-34.egg")
+ (files "srfi-34.scm" "srfi-34.setup" "examples/srfi-34-examples.scm" "srfi-34.meta" "srfi-34.release-info" "tests/run.scm")
+ (doc-from-wiki)
+ (license "SRFI")
+ (category misc)
+ (author "ben")
+ (synopsis "SRFI-34: Exception Handling for Programs"))
