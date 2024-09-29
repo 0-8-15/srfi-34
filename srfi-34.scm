@@ -20,11 +20,16 @@
    (prefix (only chicken error) chicken:)
    (only chicken make-parameter)
    ))
- (else
+ (chicken-5
   (import
    (prefix (only (chicken base) error) chicken:)
    srfi-39
-   )))
+   ))
+ (else
+  (import
+    (prefix (only (chicken base) error) chicken:)
+    (only (scheme base) make-parameter))
+  ))
 
 (define current-exception-handlers
  (make-parameter
